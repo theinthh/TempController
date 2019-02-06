@@ -1,0 +1,41 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    title Collapsible sidebar using Bootstrap 4
+    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css', integrity='sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4', crossorigin='anonymous')
+  body
+    br
+    .row.container-fluid
+      .col-sm-6
+        .card.p-3.mb-2.bg-info.text-white
+          .card-body
+            h5.card-title Profile
+            p.card-text Navigate you to your profile
+            a.btn.btn-light(href='profile') Go
+      .col-sm-6
+        .card.p-3.mb-2.bg-danger.text-white
+          .card-body
+            h5.card-title Controls
+            p.card-text Your remote controller for home and office
+            a.btn.btn-light(href='onoff') Go
+      .col-sm-6
+        .card.p-3.mb-2.bg-warning.text-white
+          .card-body
+            h5.card-title RealTime Details
+            p.card-text List of temperature changes with time
+            a.btn.btn-light(href='/') Go
+      .col-sm-6
+        .card.p-3.mb-2.bg-dark.text-white
+          .card-body
+            h5.card-title About Us !
+            p.card-text What we are !
+            a.btn.btn-light(href='/') Go
+    // jQuery CDN - Slim version (=without AJAX)
+    script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js', integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo', crossorigin='anonymous')
+    // Popper.JS
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js', integrity='sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ', crossorigin='anonymous')
+    // Bootstrap JS
+    script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js', integrity='sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm', crossorigin='anonymous')

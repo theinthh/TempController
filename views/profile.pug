@@ -1,0 +1,75 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css', integrity='sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4', crossorigin='anonymous')
+    meta(charset='utf-8')
+    style(type='text/css', media='screen').
+      body {
+      background: #ffffff;
+      text-align: center;
+      margin: 100px auto;
+      max-width: 462px;
+      padding: 0 40px;
+      font: 18px normal 'Varela Round', Helvetica, serif;
+      color: #777B7E;
+      }
+      img {
+      width: 100%;
+      }
+      #avatar {
+      width: 50%;
+      border-radius: 50%;
+      margin: 0 25% 0 25%;
+      }
+      #username {
+      margin: 20px 0 0;
+      }
+      #profile {
+      background:  #B3DAF1;
+      border-radius: 4px;
+      border: 1px solid;
+      padding: 40px 0 0;
+      margin: -40px 0 0;
+      }
+      ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 40px 0 0;
+      }
+      li {
+      display: inline-block;
+      width: 100%;
+      padding: 22px 0;
+      margin: 0;
+      border-top: 1px solid #D5DDE4;
+      }
+      a,
+      a:visited {
+      color: #5FB6E1;
+      text-decoration: none;
+      }
+      span {
+      color: #2C3238;
+      }
+    body
+    #profile
+      img#avatar(src='./images/icons8-id-curly-hair-male-student-100.png', alt='Avatar')
+      p
+        span= name
+      ul
+        li
+          span= email
+        li
+          span= phone
+        li 
+          span= position
+        li
+          a(href='/logout') LOG OUT
+    script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js', integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo', crossorigin='anonymous')
+    // Popper.JS
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js', integrity='sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ', crossorigin='anonymous')
+    // Bootstrap JS
+    script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js', integrity='sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm', crossorigin='anonymous')

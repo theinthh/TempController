@@ -1,0 +1,83 @@
+html
+  head
+    title Temperature Controlled Fan and Thermometer
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+    script(src='/socket.io/socket.io.js')
+    script(src='https://code.jquery.com/jquery-1.11.1.js')
+    style.
+      h1{
+      color: red;
+      }
+      p{
+      color: darkblue;
+      font-size: 18px;
+      }
+      div{
+      color: red;
+      font-size: 18px;
+      }
+      .row-centered {
+      text-align:center;
+      }
+      .text-center {
+      text-align: center;
+      font-size: 32px;
+      }
+      .btn{
+      width: 180px;
+      height: 50px;
+      font-size: 20px;
+      }
+      .temp {
+      animation-name: example;
+      animation-duration: 4s;
+      }
+  body
+    .container
+      h1 Temperature
+      br
+      .row
+      p This is to show the temperature read from sensor and control the fan mode
+      br
+      .text-center
+        img(src='http://172.20.10.3:2000/images/icons8-temperature-48.png')
+        | Temperature
+      br
+      .text-center.temp
+    br
+    br
+    .text-center
+      img(src='http://172.20.10.3:2000/images/icons8-shutdown-48.png')
+      |         ON/OFF
+    br
+    br
+    .row-centered
+      .col-xs-6
+        button.on.btn.btn-success(type='button')
+          | Turn ON
+      .col-xs-6
+        button.off.btn.btn-success(type='button')
+          | Turn OFF
+      br
+      a(type='button', href='/logout') Logout
+    script.
+      var socket = io("http://172.20.10.3:3000/onoff");
+      $(function () {
+      $('.on').bind("click", () => {
+      console.log("ON");
+      socket.emit('message', "a");
+      return false;
+      });
+      $('.off').bind("click", () => {
+      console.log("OFF");
+      socket.emit('message', "b");
+      return false;
+      });
+      });
+      $(function (){
+      socket.on('mess', msg => {
+      $('.temp').append($('.temp').text(msg));
+      });
+      })
